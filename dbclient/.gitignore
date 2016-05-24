@@ -1,0 +1,19 @@
+.gradle/
+build/
+
+##Eclipse##
+.classpath
+.project
+.settings/
+bin/
+
+##Gradle##
+./gradle
+build/
+
+##Runtime stuff##
+/logs
+
+##HSQLDB##
+m.properties
+m.script

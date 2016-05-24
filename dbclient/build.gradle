@@ -1,0 +1,30 @@
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+version = '1.0'
+
+apply plugin: 'application'
+mainClassName = 'pl.lodz.uni.math.app.Main.Main'
+
+repositories {
+	mavenCentral()
+}
+
+ext{
+	hsqldbVersion = "2.3.4"
+	log4jVersion = "2.5"
+	junitVersion = "4.12"
+	
+	liblaries = [
+		hsqldb: ["org.hsqldb:hsqldb:${hsqldbVersion}"],
+		log4j: ["org.apache.logging.log4j:log4j-api:${log4jVersion}",
+				"org.apache.logging.log4j:log4j-core:${log4jVersion}",
+				"org.apache.logging.log4j:log4j-slf4j-impl:${log4jVersion}"]
+		]
+		
+}
+
+dependencies {
+	compile liblaries.hsqldb
+	compile liblaries.log4j
+}
